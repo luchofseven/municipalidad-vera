@@ -23,7 +23,7 @@ export default function ButtonToTop (): ReactElement {
 
   return (
     <>
-      {scroll > 500 && <button className='button-to-top' onClick={handleClick}>{ARROW_UP}</button>}
+      {scroll > 500 && <button className='button-to-top' onClick={handleClick} aria-label='to-top-button'>{ARROW_UP}</button>}
     </>
   )
 }

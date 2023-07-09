@@ -13,7 +13,7 @@ export default function CardNews ({ id, title, image, date, info }: Reports): Re
   return (
     <article className='card-news'>
       <div className='card-img'>
-        <img src={image} alt={title} />
+        <img src={image} alt={title} width='200px' height='auto' />
       </div>
       <div className='card-info'>
         <h3>{title}</h3>

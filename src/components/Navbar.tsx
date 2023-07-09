@@ -34,9 +34,9 @@ export default function Navbar (): ReactElement {
       <header className='header'>
         <div>
           <Link href='/'>
-            <img src='/muni-logo.avif' alt='Logo de la Municipalidad de Vera' />
+            <img src='/muni-logo.avif' alt='Logo de la Municipalidad de Vera' width='auto' height='auto' />
           </Link>
-          <button onClick={handleClickMenu}>{MENU_BURGER}</button>
+          <button onClick={handleClickMenu} aria-label='menu-button'>{MENU_BURGER}</button>
         </div>
       </header>
       <nav className={menu ? 'navbar' : 'navbar is-active'}>

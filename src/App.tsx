@@ -1,5 +1,5 @@
 import { ReactElement, Suspense, lazy } from 'react'
-import { Route } from 'wouter'
+import { Router, Route } from 'wouter'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
@@ -16,13 +16,17 @@ export default function App (): ReactElement {
     <>
       <Navbar />
       <Suspense fallback={<Loader />}>
-        <Route path='/' component={Home} />
-        <Route path='/gobierno-electronico' component={ElectronicGovernment} />
-        <Route path='/licencias' component={Licenses} />
-        <Route path='/comercio' component={Commerce} />
-        <Route path='/balances' component={Stats} />
+        <Router>
+          <Route path='/' component={Home} />
+          <Route path='/gobierno-electronico' component={ElectronicGovernment} />
+          <Route path='/licencias' component={Licenses} />
+          <Route path='/comercio' component={Commerce} />
+          <Route path='/balances' component={Stats} />
+        </Router>
       </Suspense>
-      <Route path='/report/:id' component={Report} />
+      <Router>
+        <Route path='/report/:id' component={Report} />
+      </Router>
       <Footer />
     </>
   )
