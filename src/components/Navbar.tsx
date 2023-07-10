@@ -5,9 +5,7 @@ import { Link } from 'wouter'
 export default function Navbar (): ReactElement {
   const [menu, setMenu] = useState(false)
 
-  const handleClickMenu = (): void => {
-    setMenu(!menu)
-  }
+  const handleClickMenu = (): void => setMenu(!menu)
 
   const handleClick = (e: MouseEvent): void => {
     const target = e.target as Element
@@ -24,9 +22,7 @@ export default function Navbar (): ReactElement {
   useEffect(() => {
     document.addEventListener('click', handleClick)
 
-    return () => {
-      document.removeEventListener('click', handleClick)
-    }
+    return () => document.removeEventListener('click', handleClick)
   }, [])
 
   return (

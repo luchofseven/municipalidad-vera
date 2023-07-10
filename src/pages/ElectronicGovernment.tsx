@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 
 export default function ElectronicGovernment (): ReactElement {
   return (
-    <section className='service-section'>
+    <section className='pages-section'>
       <h2>Gobierno Electrónico</h2>
     </section>
   )

@@ -16,9 +16,7 @@ export default function ButtonToTop (): ReactElement {
   useEffect(() => {
     document.addEventListener('scroll', handleScroll)
 
-    return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
+    return () => document.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
