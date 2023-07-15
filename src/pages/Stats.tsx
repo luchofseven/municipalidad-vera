@@ -1,9 +1,10 @@
-import { ReactElement } from 'react'
 
-export default function Stats (): ReactElement {
+export default function Stats (): JSX.Element {
   return (
     <section className='pages-section'>
+
       <h2>Balances</h2>
+
     </section>
   )
 }

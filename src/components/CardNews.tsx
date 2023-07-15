@@ -1,26 +1,24 @@
-import { ReactElement } from 'react'
-import { Link } from 'wouter'
+import { Link } from 'react-router-dom'
+import { type ReportData } from '../types'
 
-interface Reports {
-  id: `${string}-${string}-${string}-${string}-${string}`
-  title: string
-  image: string
-  date: string
-  info: string
-}
+export default function CardNews ({ report }: { report: ReportData }): JSX.Element {
+  const { id, title, image, date, info } = report
 
-export default function CardNews ({ id, title, image, date, info }: Reports): ReactElement {
   return (
     <article className='card-news'>
+
       <div className='card-img'>
         <img src={image} alt={title} width='200px' height='auto' />
       </div>
+
       <div className='card-info'>
         <h3>{title}</h3>
         <small>{date}</small>
         <p>{info}</p>
       </div>
-      <Link href={`/report/${id}`}>Leer más...</Link>
+
+      <Link to={`/report/${id}`}>Leer más...</Link>
+
     </article>
   )
 }

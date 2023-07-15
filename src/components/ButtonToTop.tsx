@@ -1,7 +1,7 @@
-import { ReactElement, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { ARROW_UP } from '../icons/Icons'
 
-export default function ButtonToTop (): ReactElement {
+export default function ButtonToTop (): JSX.Element {
   const [scroll, setScroll] = useState(0)
 
   const handleClick = (): void => {
@@ -21,7 +21,13 @@ export default function ButtonToTop (): ReactElement {
 
   return (
     <>
-      {scroll > 500 && <button className='button-to-top' onClick={handleClick} aria-label='to-top-button'>{ARROW_UP}</button>}
+      <button
+        className={scroll > 500 ? 'button-to-top is-active' : 'button-to-top'}
+        aria-label='to-top-button'
+        onClick={handleClick}
+      >
+        {ARROW_UP}
+      </button>
     </>
   )
 }

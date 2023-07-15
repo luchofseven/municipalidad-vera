@@ -1,5 +1,5 @@
-import { ReactElement, Suspense, lazy } from 'react'
-import { Router, Route } from 'wouter'
+import { Suspense, lazy } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
@@ -11,23 +11,23 @@ const Licenses = lazy(async () => await import('./pages/Licenses'))
 const Commerce = lazy(async () => await import('./pages/Commerce'))
 const Stats = lazy(async () => await import('./pages/Stats'))
 
-export default function App (): ReactElement {
+export default function App (): JSX.Element {
   return (
     <>
-      <Navbar />
-      <Suspense fallback={<Loader />}>
-        <Router>
-          <Route path='/' component={Home} />
-          <Route path='/gobierno-electronico' component={ElectronicGovernment} />
-          <Route path='/licencias' component={Licenses} />
-          <Route path='/comercio' component={Commerce} />
-          <Route path='/balances' component={Stats} />
-        </Router>
-      </Suspense>
-      <Router>
-        <Route path='/report/:id' component={Report} />
-      </Router>
-      <Footer />
+      <BrowserRouter>
+        <Navbar />
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/gobierno-electronico' element={<ElectronicGovernment />} />
+            <Route path='/licencias' element={<Licenses />} />
+            <Route path='/comercio' element={<Commerce />} />
+            <Route path='/balances' element={<Stats />} />
+            <Route path='/report/:id' element={<Report />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

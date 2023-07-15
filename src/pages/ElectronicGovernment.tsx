@@ -1,9 +1,10 @@
-import { ReactElement } from 'react'
 
-export default function ElectronicGovernment (): ReactElement {
+export default function ElectronicGovernment (): JSX.Element {
   return (
     <section className='pages-section'>
+
       <h2>Gobierno Electrónico</h2>
+
     </section>
   )
 }
