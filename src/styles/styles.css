@@ -266,7 +266,8 @@ img {
 }
 
 .pages-section {
-  margin-top: 5rem;
+  margin-top: 6rem;
+  min-height: calc(100vh - 13rem);
 }
 
 .report-section {

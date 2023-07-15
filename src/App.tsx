@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
@@ -14,7 +14,7 @@ const Stats = lazy(async () => await import('./pages/Stats'))
 export default function App (): JSX.Element {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Suspense fallback={<Loader />}>
           <Routes>
@@ -27,7 +27,7 @@ export default function App (): JSX.Element {
           </Routes>
         </Suspense>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
