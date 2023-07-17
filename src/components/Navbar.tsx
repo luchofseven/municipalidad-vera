@@ -31,28 +31,29 @@ export default function Navbar (): JSX.Element {
 
         <div>
           <Link to='/'>
-            <img src='/muni-logo.avif' alt='Logo de la Municipalidad de Vera' width='auto' height='auto' />
+            <img src='/muni-logo.avif' alt='Logo de la Municipalidad de Vera' width='200px' height='200px' />
           </Link>
 
-          <button onClick={handleClickMenu} aria-label='menu-button'>{MENU_BURGER}</button>
+          <button onClick={handleClickMenu} className={`${menu ? 'is-active' : ''}`} aria-label='menu-button'>{MENU_BURGER}</button>
         </div>
+
+        <nav className={menu ? 'navbar is-active' : 'navbar'}>
+
+          <ul>
+
+            <Link to='/'>MUNICIPALIDAD DE VERA</Link>
+            <a href='#services'>SERVICIOS</a>
+            <a href='#reports'>NOTICIAS</a>
+            <Link to='#'>CONSULTAS</Link>
+            <Link to='#'>LA CIUDAD</Link>
+            <Link to='#'>GOBIERNO</Link>
+
+          </ul>
+
+        </nav>
 
       </header>
 
-      <nav className={menu ? 'navbar' : 'navbar is-active'}>
-
-        <ul>
-
-          <Link to='/'>MUNICIPALIDAD DE VERA</Link>
-          <a href='#services'>SERVICIOS</a>
-          <a href='#reports'>NOTICIAS</a>
-          <Link to='#'>CONSULTAS</Link>
-          <Link to='#'>LA CIUDAD</Link>
-          <Link to='#'>GOBIERNO</Link>
-
-        </ul>
-
-      </nav>
     </>
   )
 }

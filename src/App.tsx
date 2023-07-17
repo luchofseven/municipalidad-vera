@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
@@ -14,7 +14,7 @@ const Stats = lazy(async () => await import('./pages/Stats'))
 export default function App (): JSX.Element {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Navbar />
         <Suspense fallback={<Loader />}>
           <Routes>
@@ -24,10 +24,11 @@ export default function App (): JSX.Element {
             <Route path='/comercio' element={<Commerce />} />
             <Route path='/balances' element={<Stats />} />
             <Route path='/report/:id' element={<Report />} />
+            <Route path='*' element={<h2>Error 404</h2>} />
           </Routes>
         </Suspense>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </>
   )
 }
