@@ -8,7 +8,7 @@ export const apiNews = [
   },
   {
     id: 2,
-    title: 'SE REALIZÓ UNA NUEVA EDICIÓN DE LA CORRID “SAN JUAN BAUTISTA”',
+    title: 'SE REALIZÓ UNA NUEVA EDICIÓN DE LA CORRIDA “SAN JUAN BAUTISTA”',
     image: '/report-2.webp',
     date: 'junio 25, 2023',
     info: 'Cientos de atletas de la región participaron de una nueva edición de la carrera en el marco del 131° Aniversario de Vera. El Director de Deportes, Federico Moral expresó “quiero agradecer a todos los que año a año se encuentran en nuestra ciudad para ser parte de este evento deportivo, que además es muy importante estadísticamente para su trayectoria”. Mirá los resultados en: https://expertime.com.ar/races/184'
