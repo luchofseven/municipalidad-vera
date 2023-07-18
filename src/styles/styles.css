@@ -261,6 +261,10 @@ img {
   line-height: 1.5rem;
 }
 
+.main-container {
+  margin-top: 7rem;
+}
+
 .section-title {
   text-align: center;
   padding: 1.5rem 0;
