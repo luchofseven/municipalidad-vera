@@ -73,7 +73,7 @@ img {
   position: fixed;
   z-index: 100;
   width: 100%;
-  height: calc(100dvh - 5rem);
+  height: calc(100dvh - 6rem);
   top: 6rem;
   bottom: 0;
   right: 0;
@@ -107,7 +107,7 @@ img {
 }
 
 .hero {
-  height: 100dvh;
+  height: calc(100dvh);
 }
 
 .hero .hero-img {
