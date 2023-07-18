@@ -24,7 +24,7 @@ export default function App (): JSX.Element {
             <Route path='/comercio' element={<Commerce />} />
             <Route path='/balances' element={<Stats />} />
             <Route path='/report/:id' element={<Report />} />
-            <Route path='*' element={<h2>Error 404</h2>} />
+            <Route path='*' element={<h2 className='pages-section'>Error 404</h2>} />
           </Routes>
         </Suspense>
         <Footer />

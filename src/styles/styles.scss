@@ -96,12 +96,11 @@ img {
 
       a {
         text-decoration: none;
-        list-style: none;
         font-weight: 700;
         width: 100%;
-        padding: 1.5rem 0rem;
         text-align: center;
         color: $white-color;
+        padding: 1.5rem 0rem;
       }
     }
   }
@@ -131,7 +130,7 @@ img {
       height: 100%;
       object-position: center;
       object-fit: cover;
-      filter: brightness(30%);
+      filter: brightness(50%);
     }
   }
 
@@ -165,9 +164,10 @@ img {
 
       span {
         font-size: 2.4rem;
-        color: $pink-color;
+        color: $white-color;
         display: block;
         font-style: italic;
+        text-decoration: underline;
       }
     }
   }
@@ -184,28 +184,34 @@ img {
     gap: 1rem;
     padding: 0;
 
-    a {
-      background-color: $pink-color;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    li {
+      list-style: none;
       width: 100%;
-      height: 180px;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      color: $white-color;
-      padding: 1.5rem 0;
 
-      svg {
-        width: 100px;
-        height: 100px;
-      }
-
-      h4 {
-        font-size: 1.1rem;
+      a {
+        background-color: $pink-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 180px;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        color: $white-color;
+        padding: 1.5rem 0;
+  
+        svg {
+          width: 100px;
+          height: 100px;
+        }
+  
+        h4 {
+          font-size: 1.1rem;
+        }
       }
     }
+
   }
 }
 
@@ -461,7 +467,6 @@ img {
         height: 100%;
         object-position: center;
         object-fit: cover;
-        filter: brightness(30%);
       }
     }
 
@@ -720,7 +725,6 @@ img {
         height: 100%;
         object-position: center;
         object-fit: cover;
-        filter: brightness(30%);
       }
     }
 
@@ -739,6 +743,7 @@ img {
         text-align: center;
         padding: 0rem;
         margin: 0;
+        margin-top: 6rem;
 
         span {
           color: $pink-color;
@@ -753,7 +758,6 @@ img {
 
         span {
           font-size: 2.8rem;
-          color: $pink-color;
           display: block;
           font-style: italic;
         }

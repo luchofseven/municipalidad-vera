@@ -94,12 +94,11 @@ img {
 
 .header .navbar ul a {
   text-decoration: none;
-  list-style: none;
   font-weight: 700;
   width: 100%;
-  padding: 1.5rem 0rem;
   text-align: center;
   color: #ffffff;
+  padding: 1.5rem 0rem;
 }
 
 .header .navbar.is-active {
@@ -124,7 +123,7 @@ img {
   height: 100%;
   object-position: center;
   object-fit: cover;
-  filter: brightness(30%);
+  filter: brightness(50%);
 }
 
 .hero div {
@@ -159,9 +158,10 @@ img {
 
 .hero div h3 span {
   font-size: 2.4rem;
-  color: #ea028c;
+  color: #ffffff;
   display: block;
   font-style: italic;
+  text-decoration: underline;
 }
 
 .card-services {
@@ -175,7 +175,12 @@ img {
   padding: 0;
 }
 
-.card-services ul a {
+.card-services ul li {
+  list-style: none;
+  width: 100%;
+}
+
+.card-services ul li a {
   background-color: #ea028c;
   display: flex;
   flex-direction: column;
@@ -189,12 +194,12 @@ img {
   padding: 1.5rem 0;
 }
 
-.card-services ul a svg {
+.card-services ul li a svg {
   width: 100px;
   height: 100px;
 }
 
-.card-services ul a h4 {
+.card-services ul li a h4 {
   font-size: 1.1rem;
 }
 
@@ -431,7 +436,6 @@ img {
     height: 100%;
     object-position: center;
     object-fit: cover;
-    filter: brightness(30%);
   }
   .hero div h2 {
     font-size: 4rem;
@@ -637,7 +641,6 @@ img {
     height: 100%;
     object-position: center;
     object-fit: cover;
-    filter: brightness(30%);
   }
   .hero div {
     position: absolute;
@@ -654,6 +657,7 @@ img {
     text-align: center;
     padding: 0rem;
     margin: 0;
+    margin-top: 6rem;
   }
   .hero div h2 span {
     color: #ea028c;
@@ -666,7 +670,6 @@ img {
   }
   .hero div h3 span {
     font-size: 2.8rem;
-    color: #ea028c;
     display: block;
     font-style: italic;
   }

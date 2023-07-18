@@ -6,22 +6,30 @@ export default function CardServices (): JSX.Element {
     <article className='card-services'>
 
       <ul>
-        <Link to='/gobierno-electronico'>
-          {ICON_PC}
-          <h4>GOBIERNO ELECTRÓNICO</h4>
-        </Link>
-        <Link to='/licencias'>
-          {ICON_LICENSE}
-          <h4>LICENCIAS DE CONDUCIR</h4>
-        </Link>
-        <Link to='/comercio'>
-          {ICON_CART}
-          <h4>COMERCIO</h4>
-        </Link>
-        <Link to='/balances'>
-          {ICON_STATS}
-          <h4>BALANCES</h4>
-        </Link>
+        <li>
+          <Link to='/gobierno-electronico'>
+            {ICON_PC}
+            <h4>GOBIERNO ELECTRÓNICO</h4>
+          </Link>
+        </li>
+        <li>
+          <Link to='/licencias'>
+            {ICON_LICENSE}
+            <h4>LICENCIAS DE CONDUCIR</h4>
+          </Link>
+        </li>
+        <li>
+          <Link to='/comercio'>
+            {ICON_CART}
+            <h4>COMERCIO</h4>
+          </Link>
+        </li>
+        <li>
+          <Link to='/balances'>
+            {ICON_STATS}
+            <h4>BALANCES</h4>
+          </Link>
+        </li>
       </ul>
 
     </article>

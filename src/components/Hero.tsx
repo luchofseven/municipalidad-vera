@@ -5,7 +5,7 @@ export default function Hero (): JSX.Element {
 
       <div className='hero-img'>
 
-        <img src='/municipalidad.avif' alt='Foto de la Municipalidad de Vera' width='auto' height='auto' />
+        <img src='/municipalidad.avif' alt='Foto de la Municipalidad de Vera' width='1920px' height='1080px' />
 
         <div>
           <h2>MUNICIPALIDAD DE <span>VERA</span></h2>
