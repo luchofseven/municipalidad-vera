@@ -17,7 +17,7 @@ export default function CardNews ({ report }: { report: ReportData }): JSX.Eleme
         <p>{info}</p>
       </div>
 
-      <Link to={`/report/${id}`}>Leer más...</Link>
+      <Link to={`/report/${id}`}>Ver noticia completa...</Link>
 
     </article>
   )
