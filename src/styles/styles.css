@@ -107,7 +107,7 @@ img {
 }
 
 .hero {
-  height: calc(100dvh);
+  height: calc(100vh - 6rem);
 }
 
 .hero .hero-img {
