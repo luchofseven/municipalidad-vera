@@ -13,22 +13,22 @@ export default function CardServices (): JSX.Element {
           </Link>
         </li>
         <li>
-          <Link to='/licencias'>
+          <a href='#'>
             {ICON_LICENSE}
             <h4>LICENCIAS DE CONDUCIR</h4>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to='/comercio'>
+          <a href='#'>
             {ICON_CART}
             <h4>COMERCIO</h4>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to='/balances'>
+          <a href='#'>
             {ICON_STATS}
             <h4>BALANCES</h4>
-          </Link>
+          </a>
         </li>
       </ul>
 

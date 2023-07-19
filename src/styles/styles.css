@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 html {
   box-sizing: border-box;
   font-size: 14px;
@@ -24,9 +25,7 @@ img {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: transparent;
   height: 6rem;
   position: fixed;
   top: 0;
@@ -34,6 +33,7 @@ img {
   right: 0;
   width: 100%;
   z-index: 100;
+  transition: all 800ms ease-in-out;
 }
 
 .header div {
@@ -123,7 +123,7 @@ img {
   height: 100%;
   object-position: center;
   object-fit: cover;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .hero div {
@@ -139,29 +139,19 @@ img {
 
 .hero div h2 {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-family: "Lilita One", cursive;
+  letter-spacing: 0.2rem;
   text-align: center;
   padding: 0 1.5rem;
   margin: 0;
 }
 
 .hero div h2 span {
+  font-size: 4rem;
+  display: block;
   color: #ea028c;
   font-style: italic;
-}
-
-.hero div h3 {
-  color: #ffffff;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.hero div h3 span {
-  font-size: 2.4rem;
-  color: #ffffff;
-  display: block;
-  font-style: italic;
-  text-decoration: underline;
 }
 
 .card-services {
@@ -276,6 +266,47 @@ img {
   margin-top: 6rem;
 }
 
+.electronic-government header {
+  background-color: #eeeeee;
+  display: grid;
+  place-content: center;
+  height: 4rem;
+}
+
+.electronic-government article ul {
+  padding: 0;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 95%;
+}
+
+.electronic-government article ul a {
+  background-color: #ea028c;
+  display: block;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.electronic-government article ul a svg {
+  width: 35px;
+  height: 35px;
+}
+
+.electronic-government article ul a p {
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+}
+
 .report-section {
   margin-top: 6rem;
 }
@@ -343,7 +374,7 @@ img {
 .footer {
   background-color: #ea028c;
   width: 100%;
-  height: 150px;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -503,6 +534,10 @@ img {
   .pages-section {
     margin-top: 7rem;
   }
+  .electronic-government article ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
   .report-section {
     margin-top: 7rem;
     min-height: 100vh;
@@ -536,9 +571,6 @@ img {
 
 @media (min-width: 1023px) {
   .header {
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     height: 6rem;
     position: fixed;
     top: 0;
@@ -547,6 +579,7 @@ img {
     width: 100%;
     z-index: 100;
     padding: 1rem;
+    transition: all 1s ease-in-out;
   }
   .header div {
     display: flex;
@@ -613,9 +646,8 @@ img {
     display: none;
   }
   .header .navbar ul a:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
     color: #ea028c;
-    text-decoration: underline;
   }
   .navbar.is-active {
     transform: translateX(0%);
@@ -662,6 +694,7 @@ img {
   .hero div h2 span {
     color: #ea028c;
     font-style: italic;
+    font-size: 6rem;
   }
   .hero div h3 {
     color: #ffffff;
@@ -784,6 +817,26 @@ img {
   .pages-section {
     margin-top: 6rem;
     min-height: 100vh;
+  }
+  .electronic-government article ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .electronic-government article ul a {
+    padding: 3rem 0;
+    transition: all 200ms ease-in-out;
+  }
+  .electronic-government article ul a:hover {
+    background-color: #ff6bc4;
+    transform: scale(1.05);
+  }
+  .electronic-government article ul a svg {
+    width: 35px;
+    height: 35px;
+  }
+  .electronic-government article ul a p {
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
   }
   .report-section {
     max-width: 1200px;

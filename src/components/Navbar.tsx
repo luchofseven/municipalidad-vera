@@ -7,7 +7,7 @@ export default function Navbar (): JSX.Element {
 
   const handleClickMenu = (): void => setMenu(!menu)
 
-  const handleClick = (e: MouseEvent): void => {
+  const handleNavbar = (e: MouseEvent): void => {
     const target = e.target as Element
 
     if (target?.matches('nav ul a') || target?.matches('nav')) {
@@ -19,10 +19,26 @@ export default function Navbar (): JSX.Element {
     }
   }
 
-  useEffect(() => {
-    document.addEventListener('click', handleClick)
+  const handleHeader = (): void => {
+    const $header = document.querySelector('.header') as HTMLElement
 
-    return () => document.removeEventListener('click', handleClick)
+    if (Math.round(window.scrollY) > 150) {
+      $header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'
+      $header.style.backdropFilter = 'blur(5px)'
+    } else {
+      $header.style.backgroundColor = 'transparent'
+      $header.style.backdropFilter = 'none'
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleNavbar)
+    document.addEventListener('scroll', handleHeader)
+
+    return () => {
+      document.removeEventListener('click', handleNavbar)
+      document.removeEventListener('scroll', handleHeader)
+    }
   }, [])
 
   return (
@@ -47,11 +63,11 @@ export default function Navbar (): JSX.Element {
 
             <a href='#reports'>NOTICIAS</a>
 
-            <Link to='#'>CONSULTAS</Link>
+            <a href='#'>CONSULTAS</a>
 
-            <Link to='#'>LA CIUDAD</Link>
+            <a href='#'>LA CIUDAD</a>
 
-            <Link to='#'>GOBIERNO</Link>
+            <a href='#'>GOBIERNO</a>
 
           </ul>
 

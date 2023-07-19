@@ -3,6 +3,7 @@ import CardServices from '../components/CardServices'
 import CardNews from '../components/CardNews'
 import ButtonToTop from '../components/ButtonToTop'
 import { apiNews } from '../mock_api/news'
+import Footer from '../components/Footer'
 
 export default function Home (): JSX.Element {
   return (
@@ -27,6 +28,7 @@ export default function Home (): JSX.Element {
 
         <ButtonToTop />
 
+        <Footer />
       </main>
     </>
   )
