@@ -5,20 +5,22 @@ export default function CardNews ({ report }: { report: ReportData }): JSX.Eleme
   const { id, title, image, date, info } = report
 
   return (
-    <article className='card-news'>
+    <Link to={`/report/${id}`}>
+      <article className='card-news'>
 
-      <div className='card-img'>
-        <img src={image} alt={title} width='200px' height='auto' />
-      </div>
+        <div className='card-img'>
+          <img src={image} alt={title} width='200px' height='auto' />
+        </div>
 
-      <div className='card-info'>
-        <h3>{title}</h3>
-        <small>{date}</small>
-        <p>{info}</p>
-      </div>
+        <div className='card-info'>
+          <h3>{title}</h3>
+          <small>{date}</small>
+          <p>{info}</p>
+        </div>
 
-      <Link to={`/report/${id}`}>Ver noticia completa...</Link>
+        <footer>Ver noticia completa...</footer>
 
-    </article>
+      </article>
+    </Link>
   )
 }

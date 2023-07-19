@@ -5,7 +5,7 @@ export default function Report (): JSX.Element {
   const { id } = useParams()
   const parsedId = Number(id)
 
-  const { report } = useData(parsedId)
+  const { title, image, date, info } = useData(parsedId)
 
   scrollTo(0, 0)
 
@@ -15,13 +15,13 @@ export default function Report (): JSX.Element {
     <section className='report-section'>
 
       <picture>
-        <img src={report?.image} alt={report?.title} />
+        <img src={image} alt={title} />
       </picture>
 
       <article>
-        <small>{report?.date}</small>
-        <h2>{report?.title}</h2>
-        <p>{report?.info}</p>
+        <small>{date}</small>
+        <h2>{title}</h2>
+        <p>{info}</p>
         <button onClick={handleBack}>Volver al inicio</button>
       </article>
 

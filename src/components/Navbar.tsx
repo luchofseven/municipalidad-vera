@@ -19,25 +19,11 @@ export default function Navbar (): JSX.Element {
     }
   }
 
-  const handleHeader = (): void => {
-    const $header = document.querySelector('.header') as HTMLElement
-
-    if (Math.round(window.scrollY) > 150) {
-      $header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'
-      $header.style.backdropFilter = 'blur(5px)'
-    } else {
-      $header.style.backgroundColor = 'transparent'
-      $header.style.backdropFilter = 'none'
-    }
-  }
-
   useEffect(() => {
     document.addEventListener('click', handleNavbar)
-    document.addEventListener('scroll', handleHeader)
 
     return () => {
       document.removeEventListener('click', handleNavbar)
-      document.removeEventListener('scroll', handleHeader)
     }
   }, [])
 

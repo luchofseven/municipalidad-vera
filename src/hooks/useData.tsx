@@ -2,12 +2,16 @@ import { useEffect, useState } from 'react'
 import { apiNews } from '../mock_api/news'
 import { type ReportData } from '../types'
 
-interface Report {
-  report?: ReportData
-}
-
-export function useData (id: number): Report {
-  const [report, setReport] = useState<ReportData>()
+export function useData (id: number): ReportData {
+  const [report, setReport] = useState<ReportData>(
+    {
+      id: 0,
+      title: '',
+      image: '',
+      date: '',
+      info: ''
+    }
+  )
 
   useEffect(() => {
     if (id !== undefined) {
@@ -16,5 +20,11 @@ export function useData (id: number): Report {
     }
   }, [id])
 
-  return { report }
+  return {
+    id: report?.id,
+    title: report?.title,
+    image: report?.image,
+    date: report?.date,
+    info: report?.info
+  }
 }
